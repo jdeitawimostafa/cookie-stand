@@ -106,4 +106,3 @@ AddShopForm.addEventListener('submit', function (event) {
   const target=document.getElementById('table-style');
   target.parentNode.removeChild(target);
   render();
-});
