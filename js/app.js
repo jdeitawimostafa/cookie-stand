@@ -6,14 +6,15 @@ function Location(location, minimum, maximum, avgCookies, totalSales, salesArr) 
   this.minimum = minimum;
   this.maximum = maximum;
   this.avgCookies = avgCookies;
-  this.totalSales = 0;
+  this.totalSales = totalSales;
   this.salesArr = salesArr;
 }
 Location.prototype.CookiesAmount = function () {
   for (let index = 0; index < workingHours.length - 1; index++) {
-    let numOfSales = Math.round((Math.floor(Math.random() * (this.maximum - this.minimum + 1)) + this.minimum) * this.avgCookies);
+    const numOfSales = Math.round((Math.floor(Math.random() * (this.maximum - this.minimum + 1)) + this.minimum) * this.avgCookies);
     this.totalSales += numOfSales;
     this.salesArr.push(numOfSales);
+
   }
 };
 const seattle = new Location('Seattle', 23, 65, 6.3, 0, []);
@@ -31,7 +32,7 @@ function render() {
 
   const parentElement = document.getElementById('salesTabel');
   const table = document.createElement('table');
-  table.setAttribute('class', 'table-style');
+  table.setAttribute('id', 'table-style');
   // first row
   const tr = document.createElement('tr');
   const thE = document.createElement('th');
@@ -43,11 +44,11 @@ function render() {
     table.appendChild(tr);
 
   }
-
+  // 2-5 rows
   for (let i = 0; i < locations.length; i++) {
     const tr2 = document.createElement('tr');
     tr2.textContent = locations[i].location;
-    tr2.setAttribute('class','location');
+    tr2.setAttribute('class', 'location');
     console.log(locations[i].location);
 
     for (let x = 0; x < workingHours.length; x++) {
@@ -62,7 +63,8 @@ function render() {
       table.appendChild(tr2);
     }
   }
-  let tr3 = document.createElement('tr');
+  // last row
+  const tr3 = document.createElement('tr');
   tr3.textContent = 'Totals';
 
   for (let i = 0; i < workingHours.length; i++) {
@@ -86,3 +88,22 @@ function render() {
 
 console.log(locations[0].salesArr);
 render();
+
+
+
+// EVENT
+const AddShopForm = document.getElementById('addShopForm');
+AddShopForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const shopName = event.target.shopName.value;
+  const minHourlyCust = Number(event.target.minHourlyCust.value);
+  const maxHourlyCust = Number(event.target.maxHourlyCust.value);
+  const avgCookie = Number(event.target.avgCookie.value);
+  document.getElementById('addShopForm').reset();
+  const addedShop = new Location(shopName, minHourlyCust, maxHourlyCust, avgCookie,0,[]);
+  locations.push(addedShop);
+  addedShop.CookiesAmount();
+  const target=document.getElementById('table-style');
+  target.parentNode.removeChild(target);
+  render();
+});

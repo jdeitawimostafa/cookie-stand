@@ -4,11 +4,16 @@
 th{
     padding: 10px 10px;
     background-color: lightgray;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(245, 14, 14);
 }
  td, tr {
     border: 1px solid rgb(172, 166, 166);
     padding: 10px 10px;
     text-align: center;
+    font-size: 20px;
+    
   } 
   td{
       text-align: center;
@@ -16,6 +21,14 @@ th{
   tr{
       margin-top: 10px;
       background-color: aliceblue;
+  }
+  #table-style{
+      margin-right: 100px;
+  }
+  #table-style tr{
+      color: rgb(41, 41, 235);
+      font-weight: bold;
+      
   }
  
   #salmon-img{
@@ -168,6 +181,31 @@ th{
     margin-right: 80px;
     margin-top: 50px;
 }
+/* ----------sales------------- */
+#form-section{
+    padding: 50px;
+    background-color: rgb(178, 178, 238);
+
+}
+#form-section #addShopForm legend{
+    font-size: 30px;
+    color: blue;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+table td{
+    font-size: 20px;
+}
+#sub{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: darkblue;
+}
+#sub:hover{color: red;}
+
+
 /* ------------Footer------------- */
 
 footer div {

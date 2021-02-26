@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
     <header>
         <nav id="nav">
@@ -29,14 +31,63 @@
     <section>
 
         <div id="salesTabel">
-    
+
         </div>
     </section>
-    
+    <section id="form-section">
+        <form id="addShopForm">
+            <fieldset>
+                <legend>Add New Shop</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="shopName">Shop Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="shopName" required maxlength="15">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="minHourlyCust">Min Hourly Customer</label>
+                        </td>
+                        <td>
+                            <input type="number" id="minHourlyCust" required min="1" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="maxHourlyCust">Max Hourly Customer</label>
+                        </td>
+                        <td>
+                            <input type="number" id="maxHourlyCust" required min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="avgCookie">Average Cookie</label>
+                        </td>
+                        <td>
+                            <input type="number" id="avgCookie" required min="1" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="sub" type="submit" value="Submit">
+                        </td>
+                        
+                    </tr>
+
+                    
+                </table>
+            </fieldset>
+        </form>
+
+    </section>
     <footer>
         <div>
-            
-                
+
+
 
             <a href="https://github.com/jdeitawimostafa">©2021 mostafajdeitawi. All rights reserved</a>
         </div>
