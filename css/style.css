@@ -1,6 +1,6 @@
-/* .table-style{
-    margin-left: 50px;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;900&family=Roboto:wght@400;700&display=swap');
+
+
 th{
     padding: 10px 10px;
     background-color: lightgray;
@@ -17,38 +17,52 @@ th{
       margin-top: 10px;
       background-color: aliceblue;
   }
-  /* .location{
-      /* border: solid 1px rgb(77, 2, 2); */
-      /* background-color: lightgray; */
-  /* } */
-  header{
-      background-color: rgb(231, 226, 226);
+ 
+  #salmon-img{
+      width: 100%;
+  background-color: rgb(223, 213, 213);
+ }
+  #salmon-img img{
+      width: 100%;
+     
   }
-  header img{
-      margin-left: 20%;
+  #samon-img{
+      width: 100%;
+      background-color:rgb(211, 200, 200);
+  }
+  #samon-img img {
+      width: 50%;
+      padding-left: 25%;
+      padding-top: 50px;
+      padding-bottom: 50px;
   }
   header  h1{
       text-align: center;
-      background-color:rgb(105, 165, 105);
+      background-color:rgb(7, 7, 7);
+      font-size: 35px;
+      padding: 15px 0px;
+      color: lightgoldenrodyellow;
  }
  header  h1:hover{
      color: rgb(247, 15, 15);
  }
   #salesTabel{
-      margin-left: 100px;
-      margin-top: 100px;
+      padding-left: 150px;
+      padding-top: 100px;
+      padding-bottom: 50px;
+      background-color:rgb(211, 200, 200) ;
   }
   #nav{
       width: 100%;
-      position: static;
+      position: fixed;
       z-index: 2;
-      background-color: rgb(105, 165, 105);
+      background-color: rgb(0, 0, 0);
       text-align: center;
       padding: 15px;
   }
   header nav a{
      margin-right: 100px;
-      color:black;
+      color:rgb(255, 253, 253);
       font-weight: bolder;
       font-size: 20px;
       text-decoration: none;
@@ -56,4 +70,119 @@ th{
   }
   header nav a:hover{
       background-color: gray;
+      color: red;
   }
+/* ----------main------------- */
+
+#intro-section {
+    height: 500px;
+    text-align: center;
+    padding: 75px 120px;
+    background-color: rgb(211, 200, 200);
+}
+#intro-section h3{
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+#samples img {
+    width: 33%;
+    height: 300px;
+    border-radius: 30%;
+    border: 3px #3e4149 solid;
+    background-color: rgb(192, 186, 186);
+}
+#bio{
+   padding-bottom: 100px;
+    width: 100%;
+}
+
+#bio p {
+    width: 80%;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+   
+    padding: 10px;
+    /* border: 10px groove #3e4149; */
+}
+
+#location-section {
+    height: 340px;
+    background-color: rgb(211, 200, 200);
+   
+    padding: 75px 120px;
+    color: #050505;
+    font-size: x-large;
+    text-align: center;
+}
+
+#location-section div {
+    display: inline-block;
+}
+
+#locations-div {
+    font-family: 'Roboto Slab', serif;
+    margin-right: 200px;
+    text-align: left;
+    margin-top: 250px;
+}
+.marker img{
+    width: 40px;
+    
+}
+#locations-div li{
+    margin-top: 10px;
+}
+
+#imgMap-div img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#contactInfo-section {
+    font-size: x-large;
+    padding: 75px 120px;
+    text-align: center;
+    background-color:  rgb(211, 200, 200);
+}
+#contactInfo-section div{
+    margin-top: 150px;
+}
+#contactInfo-section div h3{
+    margin-right: 80px;
+}
+
+#contactInfo-section img {
+    width: 100px;
+}
+
+#contactInfo-section ul {
+    list-style: none;
+    
+}
+
+#contactInfo-section li {
+    
+    display: inline-block;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+/* ------------Footer------------- */
+
+footer div {
+    background-color: #030303;
+    color: #ffc8c8;
+    margin-bottom: 0;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+footer div a{
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+}
+footer div a:hover{
+    color: red;
+}
